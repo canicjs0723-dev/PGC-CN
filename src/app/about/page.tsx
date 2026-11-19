@@ -5,11 +5,11 @@ import { ArrowLink, Container, SectionLabel } from "@/components/ui";
 import { advantages, identity, intro, site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "关于我们",
   description: intro.body[0],
 };
 
-function AdvantageIcon({ title }: { title: string }) {
+function AdvantageIcon({ index }: { index: number }) {
   const common = {
     className: "size-8 shrink-0 text-warm-gray md:size-9",
     fill: "none",
@@ -21,13 +21,13 @@ function AdvantageIcon({ title }: { title: string }) {
     "aria-hidden": true as const,
   };
 
-  if (title === "Connectivity") {
+  if (index === 0) {
     return <svg {...common}><path d="M12 4 5 28M20 4l7 24M16 6v3m0 5v4m0 5v5" /></svg>;
   }
-  if (title === "Local Amenities") {
+  if (index === 1) {
     return <svg {...common}><path d="M5 13h22v14H5zM3 13l3-7h20l3 7M10 27v-8h6v8m4-9h3v3h-3z" /></svg>;
   }
-  if (title === "Nearby Attractions") {
+  if (index === 2) {
     return <svg {...common}><path d="m16 4 3.4 7 7.6 1.1-5.5 5.4 1.3 7.5-6.8-3.6-6.8 3.6 1.3-7.5L5 12.1l7.6-1.1z" /></svg>;
   }
   return <svg {...common}><path d="M3 27h26M4 27l8-14 5 8M23 27v-3m0-18-4.5 7.5h2.5L17 21h12l-4-7.5h2.5z" /></svg>;
@@ -37,17 +37,17 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        label="About PGC"
+        label="关于 PGC"
         title={
           <>
-            Designed for
+            为工作
             <br />
-            Work & Rest
+            与休憩而设
           </>
         }
         subtitle={site.tagline}
         image="/images/building-205-dusk.jpg"
-        alt="Building 205 at Pangyo Global Campus at golden hour"
+        alt="黄昏时分的板桥环球园区205栋"
         position="50% 45%"
       />
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
       <section className="bg-warm-white py-24 md:py-36">
         <Container className="grid gap-14 md:grid-cols-12">
           <div className="reveal md:col-span-5">
-            <SectionLabel>Introduction</SectionLabel>
+            <SectionLabel>园区介绍</SectionLabel>
             <h2 className="mt-6 font-serif text-[44px] font-light leading-[1] md:text-[60px]">
               {intro.headline[0]}
               <br />
@@ -77,7 +77,7 @@ export default function AboutPage() {
             <div className="reveal-img relative aspect-[3/2] overflow-hidden">
               <Image
                 src="/images/building-205-street.jpg"
-                alt="Building 205 exterior and gated entrance"
+                alt="205栋外观与门禁入口"
                 fill
                 sizes="(min-width: 768px) 66vw, 100vw"
                 className="object-cover"
@@ -86,10 +86,10 @@ export default function AboutPage() {
           </figure>
           <div className="grid gap-6 md:col-span-4 md:gap-8">
             <div className="reveal-img relative aspect-[3/2] overflow-hidden md:aspect-auto">
-              <Image src="/images/campus-garden.jpg" alt="Campus garden terrace with reflecting pool" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+              <Image src="/images/campus-garden.jpg" alt="带倒影水池的园区花园露台" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
             </div>
             <div className="reveal-img relative aspect-[3/2] overflow-hidden md:aspect-auto" style={{ "--delay": "150ms" } as React.CSSProperties}>
-              <Image src="/images/campus-walkway.jpg" alt="Tree-lined walkway beside Building 205" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+              <Image src="/images/campus-walkway.jpg" alt="205栋旁绿树成荫的步道" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
             </div>
           </div>
         </Container>
@@ -99,8 +99,8 @@ export default function AboutPage() {
       <section id="identity" className="scroll-mt-20 bg-ivory py-24 md:py-36">
         <Container>
           <div className="reveal">
-            <SectionLabel>Identity & Concept</SectionLabel>
-            <h2 className="mt-6 font-serif text-[44px] font-light leading-none md:text-[72px]">PGC Space Identity</h2>
+            <SectionLabel>空间理念</SectionLabel>
+            <h2 className="mt-6 font-serif text-[44px] font-light leading-none md:text-[72px]">PGC 空间理念</h2>
           </div>
           <div className="mt-16 space-y-20 md:mt-24 md:space-y-28">
             {identity.map((it, i) => (
@@ -124,11 +124,11 @@ export default function AboutPage() {
       <section id="advantage" className="scroll-mt-20 bg-warm-white py-24 md:py-36">
         <Container>
           <div className="reveal">
-            <SectionLabel>Well-Connected Location</SectionLabel>
+            <SectionLabel>交通便利的位置</SectionLabel>
             <h2 className="mt-6 font-serif text-[44px] font-light leading-none md:text-[60px]">
-              PGC Location
+              PGC
               <br />
-              Advantage
+              区位优势
             </h2>
           </div>
         </Container>
@@ -136,7 +136,7 @@ export default function AboutPage() {
         <Container className="mt-12 grid items-start gap-14 md:mt-16 md:grid-cols-12 md:gap-10 lg:gap-14">
           <div className="md:sticky md:top-28 md:col-span-7">
             <div className="reveal-img relative aspect-[1327/1107] w-full overflow-hidden border border-line bg-white">
-              <Image src="/images/location-map-en.webp" alt="English map showing TH212 Pangyo near Pangyo New Town, Bundang New Town and nearby stations" fill sizes="(min-width: 768px) 58vw, 100vw" className="object-contain" />
+              <Image src="/images/location-map-en.webp" alt="英文地图：板桥TH212及其周边的板桥新城、盆唐新城和附近车站" fill sizes="(min-width: 768px) 58vw, 100vw" className="object-contain" />
             </div>
           </div>
           <div className="md:col-span-5">
@@ -148,7 +148,7 @@ export default function AboutPage() {
                   style={{ "--delay": `${i * 90}ms` } as React.CSSProperties}
                 >
                   <dt className="flex items-center gap-4">
-                    <AdvantageIcon title={a.title} />
+                    <AdvantageIcon index={i} />
                     <span className="font-serif text-[34px] font-light">{a.title}</span>
                   </dt>
                   <dd className="mt-3 pl-12 text-[15px] leading-[1.85] text-charcoal/70">{a.body}</dd>
@@ -156,7 +156,7 @@ export default function AboutPage() {
               ))}
             </dl>
             <div className="reveal pl-12 pt-4">
-              <ArrowLink href="/information/location">Directions & Parking</ArrowLink>
+              <ArrowLink href="/information/location">交通与停车</ArrowLink>
             </div>
           </div>
         </Container>

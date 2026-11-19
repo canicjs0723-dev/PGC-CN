@@ -196,20 +196,20 @@ export function WalkingMap({ places }: { places: Place[] }) {
 
         {/* Area, road and hill names (all real, from the map) */}
         <g fontSize="15" letterSpacing="3" fontWeight="600" fill="#3f3a2d" stroke="#f7f3eb" strokeWidth="4" paintOrder="stroke" className="font-sans">
-          <text x={at([313, 374])[0]} y={at([313, 374])[1]} textAnchor="middle">PANGYO DAEJANG</text>
-          <text x={at([313, 374])[0]} y={at([313, 374])[1] + 22} textAnchor="middle">MIDDLE SCHOOL</text>
-          <text x={at([410, 340])[0]} y={at([410, 340])[1]} textAnchor="middle">PANGYO HARRINGTON PLACE</text>
-          <text x={at([410, 512])[0]} y={at([410, 512])[1]} textAnchor="middle">THE SHARP PANGYO FOREST</text>
+          <text x={at([313, 374])[0]} y={at([313, 374])[1]} textAnchor="middle">板桥大庄</text>
+          <text x={at([313, 374])[0]} y={at([313, 374])[1] + 22} textAnchor="middle">中学</text>
+          <text x={at([410, 340])[0]} y={at([410, 340])[1]} textAnchor="middle">板桥哈灵顿广场</text>
+          <text x={at([410, 512])[0]} y={at([410, 512])[1]} textAnchor="middle">THE SHARP 板桥森林</text>
           <text transform={`translate(${at([135, 230])[0]} ${at([135, 230])[1]}) rotate(-80)`} textAnchor="middle" fill="#6b4410" stroke="#f9d79b">
-            YONGIN–SEOUL EXPRESSWAY
+            龙仁—首尔高速公路
           </text>
           <text transform={`translate(${at([251, 340])[0] - 14} ${at([251, 340])[1]}) rotate(-90)`} textAnchor="middle" fill="#5b5446">
-            PANGYO DAEJANG-RO
+            板桥大庄路
           </text>
         </g>
         <g transform={`translate(${at([390, 278])[0]} ${at([390, 278])[1]})`} className="font-sans">
           <path d="M -14 10 L 0 -14 L 14 10 Z" fill="#2f4a26" stroke="#f7f3eb" strokeWidth="3" />
-          <text y="34" textAnchor="middle" fontSize="15" letterSpacing="2" fontWeight="600" fill="#f7f3eb">DAEJANG-DONG TAEBONG</text>
+          <text y="34" textAnchor="middle" fontSize="15" letterSpacing="2" fontWeight="600" fill="#f7f3eb">大庄洞胎峰</text>
         </g>
 
         {/* Leader lines: straight across when the label sits level with its pin, otherwise straight up or down
@@ -227,20 +227,20 @@ export function WalkingMap({ places }: { places: Place[] }) {
         <g transform="translate(1540 62)">
           <circle r="36" fill="#ffffff" fillOpacity="0.92" />
           <path d="M 0 -26 L 10 6 L 0 0 L -10 6 Z" fill="#1f1f1f" />
-          <text y="26" textAnchor="middle" fontSize="15" fontWeight="700" fill="#1f1f1f" className="font-sans">N</text>
+          <text y="26" textAnchor="middle" fontSize="15" fontWeight="700" fill="#1f1f1f" className="font-sans">北</text>
         </g>
       </svg>
 
       {/* Title */}
       <div className="absolute left-[1.75%] top-[3%] w-[23%] rounded-md bg-[#fbf8f1]/95 px-4 py-3.5 shadow-[0_12px_30px_-12px_rgba(0,0,0,0.45)] xl:px-5 xl:py-4">
         <p className="font-serif text-[1.375rem] leading-[1.05] text-[#1f3a2a] xl:text-[1.75rem]">
-          Pangyo TH212
+          板桥 TH212
           <br />
-          Building <span className="text-accent">205</span>
+          <span className="text-accent">205</span> 栋
         </p>
-        <p className="mt-1.5 text-[0.8125rem] font-medium text-[#1f3a2a]/80 xl:text-[0.9375rem]">Neighborhood Guide</p>
+        <p className="mt-1.5 text-[0.8125rem] font-medium text-[#1f3a2a]/80 xl:text-[0.9375rem]">周边指南</p>
         <p className="mt-2 border-t border-[#1f3a2a]/15 pt-2 text-[0.6875rem] leading-snug text-charcoal/70 xl:text-[0.75rem]">
-          Eight everyday places within a twenty-minute walk of Building 205.
+          205栋步行二十分钟范围内的八处日常生活设施。
         </p>
       </div>
 
@@ -286,11 +286,11 @@ export function WalkingMap({ places }: { places: Place[] }) {
             <span className="block text-[0.625rem] font-semibold uppercase tracking-[0.12em] xl:text-[0.6875rem]" style={{ color: tint[p.icon] }}>
               {p.kind.split(" · ")[0]}
             </span>
-            <span className="block whitespace-nowrap text-[0.8125rem] font-semibold xl:text-[0.875rem]">{p.name.replace(/ Pangyo Daejang$/, "")}</span>
+            <span className="block whitespace-nowrap text-[0.8125rem] font-semibold xl:text-[0.875rem]">{p.name.replace(/\s*(Pangyo Daejang|板桥大庄店|大庄店|板桥大庄)$/, "")}</span>
             <span className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-[#1f3a2a] px-2 py-0.5 text-[0.6875rem] font-medium text-white">
               {p.distance}
               <span className="text-white/40">|</span>
-              {p.time?.replace(" walk", "")}
+              {p.time?.replace(/ walk|步行\s*/g, "")}
             </span>
           </span>
         </div>

@@ -18,7 +18,7 @@ export default function CopyAddressButton({ address }: { address: string }) {
   return (
     <div className="mt-4">
       <button type="button" onClick={copyAddress} className="border-b border-charcoal/40 pb-1 text-[13px] hover:border-charcoal">
-        {status === "copied" ? "Address copied" : "Copy address"}
+        {status === "copied" ? "地址已复制" : "复制地址"}
       </button>
       {status === "error" && <p className="mt-2 text-[13px] text-red-700" role="alert">Could not copy address. Please copy it manually.</p>}
     </div>

@@ -10,7 +10,7 @@ export default function RoomGallery({ room }: { room: Room }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const images: GalleryImage[] = [
-    { ...room.living, name: "Living lounge" },
+    { ...room.living, name: "客厅休息区" },
     ...room.spaces.map((space) => ({ ...space, name: space.name })),
   ];
   const slideCount = images.length;
@@ -46,13 +46,13 @@ export default function RoomGallery({ room }: { room: Room }) {
 
   return (
     <>
-      <div aria-label="Room photo gallery" aria-live="off">
+      <div aria-label="客房照片图库" aria-live="off">
         {currentImage && (
           <figure>
             <button
               type="button"
               onClick={() => setActiveIndex(activeSlide)}
-              aria-label={`View ${currentImage.name} image larger`}
+              aria-label={`查看“${currentImage.name}”大图`}
               className="group block w-full text-left"
             >
               <span className="relative block aspect-[4/3] overflow-hidden">
@@ -73,13 +73,13 @@ export default function RoomGallery({ room }: { room: Room }) {
 
         {slideCount > 1 && (
           <div className="mt-6 flex items-center">
-            <div className="flex gap-2" aria-label="Gallery slides">
+            <div className="flex gap-2" aria-label="图库幻灯片">
               {Array.from({ length: slideCount }, (_, index) => (
                 <button
                   key={index}
                   type="button"
                   onClick={() => setActiveSlide(index)}
-                  aria-label={`Show image ${index + 1}`}
+                  aria-label={`显示第 ${index + 1} 张图片`}
                   aria-pressed={activeSlide === index}
                   className={`h-1 w-8 transition-colors ${activeSlide === index ? "bg-charcoal" : "bg-charcoal/20 hover:bg-charcoal/50"}`}
                 />
@@ -93,14 +93,14 @@ export default function RoomGallery({ room }: { room: Room }) {
         <div className="fixed inset-0 z-[100] grid place-items-center bg-charcoal/95 p-5 text-white md:p-10">
           <button
             type="button"
-            aria-label="Close image viewer"
+            aria-label="关闭图片查看器"
             onClick={() => setActiveIndex(null)}
             className="absolute inset-0 cursor-default"
           />
-          <div role="dialog" aria-modal="true" aria-label="Image viewer" className="relative z-10 flex h-full w-full max-w-[1440px] flex-col">
+          <div role="dialog" aria-modal="true" aria-label="图片查看器" className="relative z-10 flex h-full w-full max-w-[1440px] flex-col">
             <div className="flex items-center justify-between py-2">
               <p className="text-[13px] tracking-[0.12em]">{room.name.replace(/^PGC \d+\s*/, "")} · {activeImage.name}</p>
-              <button type="button" onClick={() => setActiveIndex(null)} aria-label="Close image viewer" className="grid size-11 place-items-center text-3xl leading-none">
+              <button type="button" onClick={() => setActiveIndex(null)} aria-label="关闭图片查看器" className="grid size-11 place-items-center text-3xl leading-none">
                 ×
               </button>
             </div>

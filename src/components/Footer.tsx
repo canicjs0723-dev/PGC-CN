@@ -13,7 +13,7 @@ export default function Footer() {
             <div key={dup} className="flex">
               {words.map((_, i) => (
                 <span key={i} className="px-8 font-serif text-[64px] leading-none tracking-tight md:px-14 md:text-[150px]">
-                  PANGYO GLOBAL CAMPUS <span className="text-accent">·</span>
+                  板桥环球园区 <span className="text-accent">·</span>
                 </span>
               ))}
             </div>
@@ -25,29 +25,29 @@ export default function Footer() {
         <div className="mx-auto w-full max-w-[1320px] px-5 py-14 md:px-10 md:py-20">
           <div className="grid gap-12 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-3">
-              <SiteLink href="/" aria-label="Pangyo Global Campus, home" className="inline-block">
+              <SiteLink href="/" aria-label="板桥环球园区首页" className="inline-block">
                 <Image src="/images/pgc-logo-2026-white.png" alt="Pangyo Global Campus" width={1422} height={296} className="h-auto w-[150px] md:w-[168px]" />
               </SiteLink>
             </div>
 
             <address className="space-y-2 text-[14px] not-italic leading-relaxed text-white/70 md:col-span-5">
-              <p className="font-medium text-white">Pangyo Global Campus (TH212)</p>
+              <p className="font-medium text-white">板桥环球园区（TH212）</p>
               <p>
                 {site.address.street} ({site.address.lot})
                 <br />
                 {site.address.rooms}
               </p>
               <dl className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 pt-4">
-                <dt className="text-white/45">Inquiry</dt>
+                <dt className="text-white/45">咨询</dt>
                 <dd><a href={`tel:${site.inquiryPhoneTel}`} className="hover:text-white">T. {site.inquiryPhone}</a></dd>
-                <dt className="text-white/45">Management Office</dt>
+                <dt className="text-white/45">管理处</dt>
                 <dd><a href={`tel:${site.managementPhoneTel}`} className="hover:text-white">T. {site.managementPhone}</a></dd>
-                <dt className="text-white/45">Email</dt>
+                <dt className="text-white/45">邮箱</dt>
                 <dd className="break-all"><a href={`mailto:${site.inquiryEmail}`} className="hover:text-white">{site.inquiryEmail}</a></dd>
               </dl>
             </address>
 
-            <nav aria-label="Footer" className="md:col-span-3 md:col-start-10">
+            <nav aria-label="页脚导航" className="md:col-span-3 md:col-start-10">
               <ul className="space-y-3 text-[13px] uppercase tracking-[0.02em]">
                 {nav.map((n) => (
                   <li key={n.href}>
@@ -61,14 +61,13 @@ export default function Footer() {
           </div>
 
           <div className="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 text-[12px] uppercase tracking-[0.16em] text-white/50 md:flex-row md:justify-between">
-            <p>© {new Date().getFullYear()} {site.operator === "RONDA KOREA" ? "RONDA Korea" : site.operator}. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} {site.operator === "RONDA KOREA" ? "RONDA Korea" : site.operator}. 保留所有权利。</p>
             <SiteLink href="/privacy" className="hover:text-white">
-              Privacy Notice
+              隐私声明
             </SiteLink>
           </div>
           <p className="mt-4 max-w-3xl text-[0.75rem] leading-relaxed text-white/40">
-            This website is maintained by Nana and Evan. All content is protected by copyright. Unauthorized copying,
-            reproduction, or redistribution is prohibited.
+            本网站由 Nana 和 Evan 维护。所有内容均受版权保护，未经授权，禁止复制、转载或再发布。
           </p>
         </div>
       </div>

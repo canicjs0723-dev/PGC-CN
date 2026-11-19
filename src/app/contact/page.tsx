@@ -6,8 +6,8 @@ import { Container, SectionLabel } from "@/components/ui";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Inquiries for business stays, guest arrangements and visits to Pangyo Global Campus.",
+  title: "联系我们",
+  description: "板桥环球园区商务住宿、宾客安排及参观咨询。",
 };
 
 export default function ContactPage() {
@@ -20,7 +20,7 @@ export default function ContactPage() {
             <div className="relative h-full">
               <Image
                 src="/images/404-hero.png"
-                alt="Guest Room living room"
+                alt="宾客套房客厅"
                 fill
                 priority
                 sizes="50vw"
@@ -34,7 +34,7 @@ export default function ContactPage() {
         <div className="relative h-[48svh] min-h-[340px] bg-charcoal text-white lg:hidden">
           <Image
             src="/images/404-hero.png"
-            alt="Guest Room living room"
+            alt="宾客套房客厅"
             fill
             priority
             sizes="(min-width: 1024px) 0px, 100vw"
@@ -44,17 +44,16 @@ export default function ContactPage() {
         </div>
 
         <Container className="py-16 lg:px-16 lg:py-40">
-          <SectionLabel>Contact Us</SectionLabel>
-          <h1 className="mt-5 font-serif text-[40px] font-light leading-none md:text-[56px]">Inquiry</h1>
+          <SectionLabel>联系我们</SectionLabel>
+          <h1 className="mt-5 font-serif text-[40px] font-light leading-none md:text-[56px]">咨询</h1>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-charcoal/70">
-            For business stays, guest arrangements and visit inquiries. Parking registration can also be requested
-            here.
+            商务住宿、宾客安排及参观咨询，均可在此提交。停车登记也可在此申请。
           </p>
           <div className="mt-14">
             <ContactForm />
           </div>
           <address className="mt-16 border-t border-line pt-8 text-[13px] not-italic leading-relaxed text-charcoal/65">
-            Pangyo Global Campus (TH212) · {site.address.rooms}
+            板桥环球园区（TH212）· {site.address.rooms}
             <br />
             {site.address.street} ({site.address.lot})
             <br />

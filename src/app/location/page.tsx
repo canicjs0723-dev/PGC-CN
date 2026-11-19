@@ -3,7 +3,7 @@ import LocationView from "@/components/LocationView";
 
 // Legacy URL kept working; canonical is /information/location.
 export const metadata: Metadata = {
-  title: "Information · Location",
+  title: "周边信息 · 位置",
   alternates: { canonical: "/information/location/" },
 };
 

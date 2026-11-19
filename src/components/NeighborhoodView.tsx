@@ -58,7 +58,7 @@ function PlaceCard({ place, index, showMap }: { place: Place; index: number; sho
             showMap ? "bg-charcoal py-3 text-white hover:bg-navy" : "self-start border-b border-charcoal/40 pb-0.5 hover:border-charcoal"
           }`}
         >
-          Map <span aria-hidden>↗</span>
+          地图 <span aria-hidden>↗</span>
         </a>
       </div>
     </li>
@@ -118,19 +118,19 @@ export default function NeighborhoodView() {
     <>
       <PageHero
         tall
-        label="Information"
-        title="Neighborhood"
-        subtitle="Everyday essentials, local dining and places worth visiting — all close to Building 205."
+        label="周边信息"
+        title="周边"
+        subtitle="生活必需、当地美食与值得一游的去处——都在205栋附近。"
         image="/images/building-205-street.jpg"
-        alt="Street outside Building 205 at TH212 Pangyo"
+        alt="板桥TH212 205栋外的街道"
         position="50% 55%"
       />
 
       <PageTabs
-        label="Information"
+        label="周边信息"
         items={[
-          { label: "Location", href: "/information/location", active: false },
-          { label: "Neighborhood", href: "/information/neighborhood", active: true },
+          { label: "位置", href: "/information/location", active: false },
+          { label: "周边", href: "/information/neighborhood", active: true },
         ]}
       />
 
@@ -138,15 +138,15 @@ export default function NeighborhoodView() {
         <Container>
           <div className="grid gap-6 md:grid-cols-12 md:items-end">
             <div className="md:col-span-6">
-              <SectionLabel>Around PGC</SectionLabel>
-              <h2 className="mt-5 font-serif text-[40px] font-light leading-none md:text-[56px]">Life Around PGC</h2>
+              <SectionLabel>PGC 周边</SectionLabel>
+              <h2 className="mt-5 font-serif text-[40px] font-light leading-none md:text-[56px]">PGC 周边生活</h2>
             </div>
             <p className="text-[15px] leading-relaxed text-charcoal/70 md:col-span-5 md:col-start-8">
-              Everyday essentials within a short walk, favorite restaurants and cafés a few minutes away by car, and places worth a visit around Seoul — all within easy reach of Building 205.
+              步行即达的生活必需设施、车程几分钟的人气餐厅与咖啡馆，以及首尔周边值得一游的去处——从205栋出发都十分便捷。
             </p>
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3" role="tablist" aria-label="Neighborhood categories">
+          <div className="mt-12 grid gap-5 md:grid-cols-3" role="tablist" aria-label="周边分类">
             {categories.map((c, i) => {
               const selected = c.key === active;
               return (

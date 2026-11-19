@@ -76,7 +76,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
       }`}
     >
       <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 md:h-[84px] md:px-10">
-        <SiteLink href="/" onClick={closeMenus} className="relative z-10 flex items-center" aria-label="Pangyo Global Campus home">
+        <SiteLink href="/" onClick={closeMenus} className="relative z-10 flex items-center" aria-label="板桥环球园区首页">
           {/* White logo over the hero; the brand-colour logo on the light (scrolled / menu-open) header. */}
           <span className="relative block">
             <Image
@@ -147,7 +147,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
           className={`relative z-10 -mr-2 flex size-11 flex-col items-center justify-center gap-[6px] lg:hidden ${mobileOpen ? "text-charcoal" : ""}`}
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileOpen ? "关闭菜单" : "打开菜单"}
         >
           <span className={`h-px w-6 bg-current transition-transform duration-300 ${mobileOpen ? "translate-y-[3.5px] rotate-45" : ""}`} />
           <span className={`h-px w-6 bg-current transition-transform duration-300 ${mobileOpen ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
@@ -200,8 +200,8 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
           </ul>
           <div className="mt-8 flex items-end justify-between gap-6">
             <div className="space-y-1 text-[13px] text-warm-gray">
-              <p>Building 205, Units 403 & 404</p>
-              <p>Pangyo Global Campus (TH212)</p>
+              <p>205栋 403、404室</p>
+              <p>板桥环球园区（TH212）</p>
             </div>
           </div>
         </nav>

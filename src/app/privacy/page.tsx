@@ -4,7 +4,7 @@ import { privacyConsent } from "@/content/contact";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Notice",
+  title: "隐私声明",
   robots: { index: false },
 };
 
@@ -13,24 +13,24 @@ export default function PrivacyPage() {
   return (
     <section className="bg-warm-white pb-28 pt-40 md:pt-48">
       <Container className="max-w-[820px]">
-        <SectionLabel>Privacy Notice</SectionLabel>
-        <h1 className="mt-5 font-serif text-[44px] font-light leading-none md:text-[60px]">Your Information</h1>
+        <SectionLabel>隐私声明</SectionLabel>
+        <h1 className="mt-5 font-serif text-[44px] font-light leading-none md:text-[60px]">您的个人信息</h1>
         <div className="mt-12 space-y-10 text-[15px] leading-[1.9] text-charcoal/80">
           <div>
-            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">Collected items</h2>
-            <p className="mt-2">{privacyConsent.items}, submitted through the contact form.</p>
+            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">收集项目</h2>
+            <p className="mt-2">{privacyConsent.items}（通过咨询表单提交）。</p>
           </div>
           <div>
-            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">Purpose</h2>
-            <p className="mt-2">{privacyConsent.purpose}.</p>
+            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">使用目的</h2>
+            <p className="mt-2">{privacyConsent.purpose}。</p>
           </div>
           <div>
-            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">Retention</h2>
-            <p className="mt-2">{privacyConsent.retention}.</p>
+            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">保存期限</h2>
+            <p className="mt-2">{privacyConsent.retention}。</p>
           </div>
           <div>
-            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">Operator</h2>
-            <p className="mt-2">{`${site.name} is operated by ${site.operator}. The inquiry form prepares an email that you send from your own email app directly to ${site.operator}; no third-party form service receives it.`}</p>
+            <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-charcoal">运营方</h2>
+            <p className="mt-2">{`板桥环球园区由 ${site.operator} 运营。咨询表单会生成一封邮件，由您通过自己的邮件应用直接发送给 ${site.operator}，任何第三方表单服务均不会接收该邮件。`}</p>
           </div>
         </div>
       </Container>

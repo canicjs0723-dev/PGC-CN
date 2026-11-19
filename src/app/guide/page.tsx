@@ -3,8 +3,8 @@ import GuideView from "@/components/GuideView";
 
 // The stay guide, shown as the last tab under Rooms.
 export const metadata: Metadata = {
-  title: "Guide",
-  description: "Arrival, check-in, guest guidelines and FAQ for your stay at Pangyo Global Campus.",
+  title: "入住指南",
+  description: "板桥环球园区入住须知：抵达、办理入住、住客守则及常见问题。",
 };
 
 export default function GuidePage() {

@@ -18,7 +18,7 @@ export default function HomeHighlightsSlider() {
   }, []);
 
   return (
-    <section className="mt-14 grid min-h-[560px] overflow-hidden bg-charcoal text-white lg:min-h-[640px] lg:grid-cols-2" aria-label="Pangyo Global Campus highlights">
+    <section className="mt-14 grid min-h-[560px] overflow-hidden bg-charcoal text-white lg:min-h-[640px] lg:grid-cols-2" aria-label="板桥环球园区亮点">
       <div className="relative min-h-[320px] bg-charcoal lg:min-h-[640px]">
         {homeHighlights.map((slide, index) => (
           <Image
@@ -54,13 +54,13 @@ export default function HomeHighlightsSlider() {
           </div>
         </div>
 
-        <div className="mt-10 flex gap-3 lg:absolute lg:right-8 lg:top-1/2 lg:mt-0 lg:-translate-y-1/2 lg:flex-col" aria-label="Choose a highlight">
+        <div className="mt-10 flex gap-3 lg:absolute lg:right-8 lg:top-1/2 lg:mt-0 lg:-translate-y-1/2 lg:flex-col" aria-label="选择亮点">
           {homeHighlights.map((slide, index) => (
             <button
               key={slide.label}
               type="button"
               onClick={() => setActiveIndex(index)}
-              aria-label={`Show ${slide.label}`}
+              aria-label={`查看${slide.label}`}
               aria-pressed={activeIndex === index}
               className={`size-2 rounded-full transition-colors ${activeIndex === index ? "bg-white" : "bg-white/35 hover:bg-white/70"}`}
             />

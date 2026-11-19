@@ -9,18 +9,18 @@ export default function InquiryOffice() {
       <Container className="py-20 md:py-28">
         <div className="reveal grid gap-6 border-b border-white/15 pb-12 md:grid-cols-12 md:items-end md:pb-16">
           <div className="md:col-span-7">
-            <SectionLabel light>Guest Assistance</SectionLabel>
+            <SectionLabel light>宾客服务</SectionLabel>
             <h2 id="inquiry-office-title" className="mt-5 font-serif text-[40px] font-light leading-[1.02] md:text-[64px]">
-              Contact &amp;
+              联系
               <br />
-              <span className="italic text-accent">Support</span>
+              <span className="italic text-accent">与支持</span>
             </h2>
           </div>
         </div>
 
         <div className="reveal grid gap-12 pt-12 md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/15 md:pt-16">
           <div className="md:pr-10">
-            <h3 className="text-[12px] font-medium uppercase tracking-[0.28em] text-accent">Inquiry</h3>
+            <h3 className="text-[12px] font-medium uppercase tracking-[0.28em] text-accent">咨询</h3>
             <ul className="mt-6 space-y-3">
               <li>
                 <a
@@ -43,22 +43,22 @@ export default function InquiryOffice() {
 
           <div className="md:px-10">
             <h3 className="text-[12px] font-medium uppercase tracking-[0.28em] text-accent">
-              Inquiry (WeChat · QR Code)
+              咨询（微信 · 二维码）
             </h3>
             <div className="mt-6 flex items-center gap-6">
               <Image
                 src="/images/wechat-qr.png"
-                alt="WeChat QR code for PGC inquiries"
+                alt="PGC 咨询微信二维码"
                 width={160}
                 height={160}
                 className="size-[140px] shrink-0 bg-white md:size-[160px]"
               />
-              <p className="text-[14px] leading-relaxed text-white/70">Scan with WeChat to send an inquiry.</p>
+              <p className="text-[14px] leading-relaxed text-white/70">使用微信扫码即可发送咨询。</p>
             </div>
           </div>
 
           <div className="md:pl-10">
-            <h3 className="text-[12px] font-medium uppercase tracking-[0.28em] text-accent">Management Office</h3>
+            <h3 className="text-[12px] font-medium uppercase tracking-[0.28em] text-accent">管理处</h3>
             <p className="mt-6">
               <a
                 href={`tel:${site.managementPhoneTel}`}

@@ -3,7 +3,7 @@ import RoomPage from "@/components/RoomPage";
 import { businessRoom, guestRoom } from "@/content/rooms";
 
 export const metadata: Metadata = {
-  title: "Business Room",
+  title: "商务套房",
   description: businessRoom.description[0],
 };
 

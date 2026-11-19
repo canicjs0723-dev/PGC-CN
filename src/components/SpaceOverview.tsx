@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 // Floor plan of both rooms (403, 404 and their lofts), opened from the room overview.
-const plan = { src: "/images/floor-plan-403-404-v5.webp", width: 2000, height: 1587, alt: "Floor plan of rooms 403 and 404, including both lofts" };
+const plan = { src: "/images/floor-plan-403-404-v5.webp", width: 2000, height: 1587, alt: "403室与404室平面图（含两处阁楼）" };
 
 export default function SpaceOverview() {
   const [open, setOpen] = useState(false);
@@ -43,7 +43,7 @@ export default function SpaceOverview() {
         aria-haspopup="dialog"
         className="group mt-10 inline-flex items-center gap-5 rounded-[4px] bg-charcoal px-7 py-4 text-[0.9375rem] uppercase tracking-[0.12em] text-white transition-colors hover:bg-navy"
       >
-        Space Overview
+        空间概览
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="size-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden>
           <path d="M7 17 17 7M9 7h8v8" />
         </svg>
@@ -51,11 +51,11 @@ export default function SpaceOverview() {
 
       {open && (
         <div className="fixed inset-0 z-[100] grid place-items-center bg-charcoal/90 p-4 md:p-10">
-          <button type="button" aria-label="Close space overview" onClick={() => setOpen(false)} className="absolute inset-0 cursor-default" />
-          <div role="dialog" aria-modal="true" aria-label="Space overview" className="relative z-10 flex h-full w-full max-w-[1100px] flex-col">
+          <button type="button" aria-label="关闭空间概览" onClick={() => setOpen(false)} className="absolute inset-0 cursor-default" />
+          <div role="dialog" aria-modal="true" aria-label="空间概览" className="relative z-10 flex h-full w-full max-w-[1100px] flex-col">
             <div className="flex items-center justify-between gap-4 py-2 text-white">
-              <p className="text-[0.8125rem] uppercase tracking-[0.12em]">Space Overview · 403 & 404</p>
-              <button type="button" onClick={() => setOpen(false)} aria-label="Close space overview" className="grid size-11 shrink-0 place-items-center text-3xl leading-none" autoFocus>
+              <p className="text-[0.8125rem] uppercase tracking-[0.12em]">空间概览 · 403、404</p>
+              <button type="button" onClick={() => setOpen(false)} aria-label="关闭空间概览" className="grid size-11 shrink-0 place-items-center text-3xl leading-none" autoFocus>
                 ×
               </button>
             </div>

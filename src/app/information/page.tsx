@@ -3,7 +3,7 @@ import LocationView from "@/components/LocationView";
 
 // Information now opens on Location (the Guide moved under Rooms at /guide); this URL keeps working.
 export const metadata: Metadata = {
-  title: "Information · Location",
+  title: "周边信息 · 位置",
   alternates: { canonical: "/information/location/" },
 };
 

@@ -6,7 +6,7 @@ import SiteLink from "@/components/SiteLink";
 import { ArrowLink, Container, SectionLabel } from "@/components/ui";
 import { directions, intro, roomUseCases, site } from "@/content/site";
 
-function UseCaseIcon({ title }: { title: string }) {
+function UseCaseIcon({ index }: { index: number }) {
   const common = {
     className: "size-7 shrink-0 text-warm-gray",
     fill: "none",
@@ -18,13 +18,13 @@ function UseCaseIcon({ title }: { title: string }) {
     "aria-hidden": true as const,
   };
 
-  if (title === "Executive Stay") {
+  if (index === 0) {
     return <svg {...common}><circle cx="16" cy="10" r="4" /><path d="M7.5 27v-2.2a8.5 8.5 0 0 1 17 0V27z" /></svg>;
   }
-  if (title === "Corporate Workshop") {
+  if (index === 1) {
     return <svg {...common}><rect x="5" y="5" width="22" height="16" rx="1" /><path d="m10 16 4-4 3 2 5-5M16 21v6m-5 0h10" /></svg>;
   }
-  if (title === "Partner Meeting") {
+  if (index === 2) {
     return <svg {...common}><circle cx="11" cy="11" r="3.5" /><circle cx="22" cy="12" r="3" /><path d="M3.5 26v-1.5a7.5 7.5 0 0 1 15 0V26zm16-7a6 6 0 0 1 9 5v2h-6" /></svg>;
   }
   return <svg {...common}><circle cx="16" cy="9" r="3.5" /><circle cx="7" cy="13" r="2.5" /><circle cx="25" cy="13" r="2.5" /><path d="M8 26v-1.5a8 8 0 0 1 16 0V26zm-6 0v-1.5a5 5 0 0 1 5-5m23 6.5v-1.5a5 5 0 0 0-5-5" /></svg>;
@@ -64,18 +64,18 @@ export default function Home() {
               </p>
             ))}
             <div className="mt-12">
-              <ArrowLink href="/about">View More</ArrowLink>
+              <ArrowLink href="/about">查看更多</ArrowLink>
             </div>
           </div>
         </Container>
       </section>
 
-      <section aria-label="Our Spaces" className="bg-ivory py-24 md:py-36">
+      <section aria-label="我们的空间" className="bg-ivory py-24 md:py-36">
         <Container>
           <div className="reveal text-center">
-            <SectionLabel>Our Spaces</SectionLabel>
+            <SectionLabel>我们的空间</SectionLabel>
             <h2 className="mt-5 font-serif text-[40px] font-light leading-[1.02] md:text-[68px]">
-              <span className="block md:inline">Spaces That</span> <span className="block md:inline">Work for You.</span>
+              <span className="block md:inline">为您而设的</span> <span className="block md:inline">理想空间。</span>
             </h2>
           </div>
 
@@ -86,9 +86,9 @@ export default function Home() {
       <section className="bg-warm-white py-24 md:py-36">
         <Container>
           <div className="reveal">
-            <SectionLabel>Ways to Use PGC</SectionLabel>
+            <SectionLabel>PGC 使用方式</SectionLabel>
             <h2 className="mt-5 max-w-3xl font-serif text-[40px] font-light leading-tight md:text-[60px]">
-              Spaces for the way your teams work and stay.
+              契合团队工作与居住方式的空间。
             </h2>
           </div>
           <div className="mt-12 grid gap-x-10 md:mt-16 md:grid-cols-2">
@@ -100,7 +100,7 @@ export default function Home() {
                 style={{ "--delay": `${index * 80}ms` } as React.CSSProperties}
               >
                 <div className="flex items-center gap-3">
-                  <UseCaseIcon title={useCase.title} />
+                  <UseCaseIcon index={index} />
                   <h3 className="font-serif text-[27px] font-light md:text-[32px]">{useCase.title}</h3>
                 </div>
                 <p className="mt-4 max-w-xl text-[15px] leading-[1.85] text-charcoal/70">{useCase.body}</p>
@@ -113,11 +113,11 @@ export default function Home() {
       <section className="bg-ivory py-28 md:py-40">
         <Container className="grid gap-14 md:grid-cols-12 md:gap-10">
           <div className="reveal md:col-span-5">
-            <SectionLabel>Location</SectionLabel>
+            <SectionLabel>位置</SectionLabel>
             <h2 className="mt-6 font-serif text-[44px] font-light leading-[1.08] md:text-[64px]">
-              Pangyo
+              板桥
               <br />
-              Global Campus
+              环球园区
             </h2>
             <address className="mt-10 space-y-1 text-[15px] not-italic leading-relaxed">
               <p className="font-medium">{site.address.rooms}</p>
@@ -137,17 +137,17 @@ export default function Home() {
               ))}
             </dl>
             <p className="mt-6 text-[13px] leading-relaxed text-charcoal/65">
-              Parking requires pre-registration. Please use the Building 204 side entrance.
+              停车需提前登记。请使用204栋一侧的入口。
             </p>
-            <p className="mt-2 text-[12px] leading-relaxed text-warm-gray">※ Travel times may vary depending on traffic conditions.</p>
+            <p className="mt-2 text-[12px] leading-relaxed text-warm-gray">※ 行车时间可能因交通状况而有所不同。</p>
             <div className="mt-10">
-              <ArrowLink href="/information/location">Directions & Parking</ArrowLink>
+              <ArrowLink href="/information/location">交通与停车</ArrowLink>
             </div>
           </div>
           <div className="reveal-img relative aspect-[4/3] self-start overflow-hidden md:col-span-7 md:aspect-auto md:h-full md:min-h-[560px]">
             <Image
               src="/images/campus-aerial.jpg"
-              alt="Aerial view of the TH212 Pangyo campus and surrounding forest"
+              alt="板桥TH212园区及周边森林鸟瞰图"
               fill
               sizes="(min-width: 768px) 58vw, 100vw"
               className="object-cover"
