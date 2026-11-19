@@ -8,26 +8,27 @@ import "./globals.css";
 const repository = process.env.GITHUB_REPOSITORY?.split("/");
 const siteUrl = repository ? `https://${repository[0]}.github.io${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}` : "http://localhost:3000";
 const description =
-  "A premium business residence in Daejang-dong, Pangyo, where work, rest and meaningful connections come together. Business Room and Guest Room.";
+  "位于板桥大庄洞的高端商务住宅，将工作、休憩与有意义的交流融为一体。提供商务套房与宾客套房。";
 
 export const metadata: Metadata = {
   title: {
-    default: "Pangyo Global Campus",
-    template: "%s | Pangyo Global Campus",
+    default: "板桥环球园区 Pangyo Global Campus",
+    template: "%s | 板桥环球园区",
   },
   description,
   // Link preview shown when the site address is shared in a messenger or social app.
   openGraph: {
     type: "website",
+    locale: "zh_CN",
     url: `${siteUrl}/`,
-    siteName: "Pangyo Global Campus",
-    title: "Pangyo Global Campus",
+    siteName: "板桥环球园区",
+    title: "板桥环球园区 Pangyo Global Campus",
     description,
-    images: [{ url: `${siteUrl}/images/og-pgc-2026.jpg`, width: 1200, height: 630, alt: "Building 205 at Pangyo Global Campus" }],
+    images: [{ url: `${siteUrl}/images/og-pgc-2026.jpg`, width: 1200, height: 630, alt: "板桥环球园区205栋" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pangyo Global Campus",
+    title: "板桥环球园区 Pangyo Global Campus",
     description,
     images: [`${siteUrl}/images/og-pgc-2026.jpg`],
   },
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="zh-CN" data-scroll-behavior="smooth">
       <head>
       </head>
       <body>

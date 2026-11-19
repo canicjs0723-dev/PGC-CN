@@ -1,6 +1,9 @@
 /* Fonts ship with the site (no external font CDN), so every phone, tablet and laptop renders the same faces.
    Pretendard: sans-serif body text, split into unicode-range chunks so only the characters on a page load.
-   Tinos: the serif for headings, drawn to Times New Roman's design and metrics, available on every platform. */
+   Tinos: the serif for headings, drawn to Times New Roman's design and metrics, available on every platform.
+   Chinese: Noto Sans SC pairs with Pretendard (both descend from Source Han Sans) and Noto Serif SC with Tinos.
+   They cover only Chinese characters and CJK punctuation, so Latin letters and digits keep the original faces. */
+@import "./fonts/noto-sc-cjk.css";
 @import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 @import "@fontsource/tinos/latin-400.css";
 @import "@fontsource/tinos/latin-400-italic.css";
@@ -38,8 +41,8 @@
   --color-charcoal: var(--charcoal);
   --color-navy: var(--navy);
   --color-accent: var(--accent);
-  --font-sans: "PGC Numerals", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-  --font-serif: "PGC Numerals", "Tinos", "Times New Roman", serif;
+  --font-sans: "PGC Numerals", "PGC Sans SC", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "PGC Numerals", "PGC Serif SC", "Tinos", "Times New Roman", "Songti SC", "SimSun", serif;
 }
 
 html {
@@ -51,7 +54,10 @@ body {
   color: var(--charcoal);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  word-break: keep-all;
+  /* Chinese has no spaces between words, so lines must be allowed to break between characters
+     (keep-all would push whole sentences onto one line). strict keeps CJK punctuation off line starts. */
+  word-break: normal;
+  line-break: strict;
 }
 
 /* Maintain the editorial headings while normalizing small labels and body copy. */
