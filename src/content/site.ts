@@ -9,27 +9,27 @@ export type NavItem = {
 };
 
 export const nav: NavItem[] = [
-  { label: "About", href: "/about" },
+  { label: "关于我们", href: "/about" },
   {
-    label: "Rooms",
+    label: "客房",
     href: "/business-room",
   },
   // Information opens on Location; the stay Guide is the last tab under Rooms (/guide).
-  { label: "Information", href: "/information/location" },
-  { label: "Contact", href: "/contact" },
+  { label: "周边信息", href: "/information/location" },
+  { label: "联系我们", href: "/contact" },
 ];
 
 export const site = {
-  name: "Pangyo Global Campus",
+  name: "板桥环球园区",
   short: "PGC",
-  tagline: "A refined stay for work and rest.",
+  tagline: "兼顾工作与休憩的雅致居所。",
   operator: "RONDA KOREA",
-  complex: "TH212 Pangyo",
+  complex: "板桥TH212",
   address: {
-    rooms: "Building 205, Units 403 & 404",
-    street: "25, Pangyodaejang-ro 2-gil, Bundang-gu, Seongnam-si",
-    lot: "Daejang-dong 596",
-    country: "Republic of Korea",
+    rooms: "205栋 403、404室",
+    street: "城南市盆唐区板桥大庄路2街25",
+    lot: "大庄洞596",
+    country: "韩国",
   },
   // Business inquiry line printed in the official brochure (not a personal number).
   inquiryPhone: "031-613-2360",
@@ -52,98 +52,98 @@ export const site = {
 };
 
 export const intro = {
-  label: "About PGC",
-  headline: ["A New Standard", "in Business Stays"],
-  lead: "A place where business and comfort connect naturally.",
+  label: "关于PGC",
+  headline: ["商务居住", "新标准"],
+  lead: "让商务与舒适自然相融的地方。",
   body: [
-    "Located in Daejang-dong, Pangyo, Pangyo Global Campus is an upscale residence with private terraces, bringing nature and seasonal outdoor living into everyday life.",
-    "Designed for employees, global partners, and visitors, it offers a refined, comfortable setting that brings work, relaxation, and meaningful connections together.",
+    "板桥环球园区坐落于板桥大庄洞，是一处配有私家露台的高端住宅，将自然与四季户外生活融入日常。",
+    "园区专为员工、全球合作伙伴及来访宾客打造，以雅致舒适的环境，将工作、休憩与有意义的交流融为一体。",
   ],
 };
 
 export const identity = [
   {
-    key: "WORK",
-    line: "A productive environment for focus and efficiency.",
-    detail: "A space that enables seamless work and enhances performance.",
+    key: "工作",
+    line: "专注高效的工作环境。",
+    detail: "让工作顺畅无阻、效率倍增的空间。",
     image: "/images/identity-work-2026.jpg",
-    alt: "Colleagues reviewing documents together",
+    alt: "同事们一起查阅文件",
   },
   {
-    key: "STAY",
-    line: "Premium living designed for comfort and privacy.",
-    detail: "A space designed for comfortable rest and privacy.",
+    key: "居住",
+    line: "兼顾舒适与私密的高品质居住。",
+    detail: "为舒适休憩与私密而设计的空间。",
     image: "/images/identity-stay-2026.jpg",
-    alt: "A sunlit bedroom with a made bed and an armchair",
+    alt: "阳光充足的卧室，床铺整洁，配有扶手椅",
   },
   {
-    key: "CONNECT",
-    line: "Seamless networking for meaningful connections.",
-    detail: "A space that brings employees and global partners together.",
+    key: "交流",
+    line: "轻松自如的交流，建立有意义的联系。",
+    detail: "让员工与全球合作伙伴相聚的空间。",
     image: "/images/identity-connect-2026.jpg",
-    alt: "Partners meeting in a bright lounge",
+    alt: "合作伙伴在明亮的休息室中会面",
   },
 ];
 
 export const directions = [
-  { from: "Head Office", distance: "21 km", time: "30 min by car" },
-  { from: "Gimpo International Airport", distance: "50 km", time: "90 min by car" },
-  { from: "Incheon International Airport", distance: "75 km", time: "90 min by car" },
+  { from: "总部", distance: "21 km", time: "车程30分钟" },
+  { from: "金浦国际机场", distance: "50 km", time: "车程90分钟" },
+  { from: "仁川国际机场", distance: "75 km", time: "车程90分钟" },
 ];
 
 export const advantages = [
   {
-    title: "Connectivity",
-    body: "Convenient access via Seopangyo Tunnel, GTX-A Seongnam Station, Seopangyo Station, the Shinbundang and Bundang Lines, and Seopangyo IC.",
+    title: "交通便利",
+    body: "经西板桥隧道、GTX-A城南站、西板桥站、新盆唐线与盆唐线以及西板桥IC，出行便捷。",
   },
   {
-    title: "Local Amenities",
-    body: "Nearby amenities include Hyundai Department Store in Pangyo New Town, Seoul National University Hospital, Homeplus, and the shops and neighborhood facilities of Pangyo Daejang District.",
+    title: "生活配套",
+    body: "周边有板桥新城现代百货、首尔大学医院、Homeplus，以及板桥大庄地区的商铺和社区设施。",
   },
   {
-    title: "Nearby Attractions",
-    body: "Lotte Premium Outlet Uiwang (20 km, 20 min), Lotte World (22 km, 35 min), Seoul Grand Park (17 km, 25 min), Gangnam COEX (25 km, 35 min), and Myeong-dong (27 km, 50 min).",
+    title: "周边景点",
+    body: "乐天名品奥特莱斯义王店（20 km，20分钟）、乐天世界（22 km，35分钟）、首尔大公园（17 km，25分钟）、江南COEX（25 km，35分钟）以及明洞（27 km，50分钟）。",
   },
   {
-    title: "Nature & Outdoors",
-    body: "Enjoy a nature-rich setting with easy access to Gogiri Valley, Cheonggyesan, Gwanggyosan, and Barasan Recreational Forest.",
+    title: "自然与户外",
+    body: "坐享丰富的自然环境，可便捷前往古基里溪谷、清溪山、光教山和巴拉山自然休养林。",
   },
 ];
 
 export const parking = {
-  title: "Parking Registration",
-  note: "Parking is available only after pre-registration is completed.",
-  entrance: "For easier access, please use the Building 204 side entrance, then proceed to Building 205.",
+  title: "停车登记",
+  note: "须完成预先登记后方可停车。",
+  entrance: "为方便出入，请从204栋一侧的入口进入，再前往205栋。",
   required: [
-    "Number of visitors & duration of stay",
-    "Vehicle license plate number & registration status",
-    "Applicant's name & contact information",
+    "来访人数及入住时长",
+    "车牌号码及登记状态",
+    "申请人姓名及联系方式",
   ],
 };
 
 export const roomUseCases = [
   {
-    title: "Executive Stay",
-    body: "A comfortable base for visiting domestic and international executives, including extended stays. The Guest Room accommodates up to 9 guests with 9 beds and 2 bathrooms.",
-    room: "Guest Room",
+    title: "高管入住",
+    body: "为来访的国内外高管提供舒适的落脚之处，也适合长期入住。宾客套房最多可住9人，设有9张床和2间卫生间。",
+    room: "宾客套房",
     href: "/guest-room",
   },
   {
-    title: "Corporate Workshop",
-    body: "Bring a small workshop and overnight stay together in the Business Room, with a projector, audio equipment, dining lounge and five beds.",
-    room: "Business Room",
+    title: "企业研讨会",
+    body: "在商务套房中同时安排小型研讨会与住宿，配有投影仪、音响设备、餐饮休息区和5张床。",
+    room: "商务套房",
     href: "/business-room",
   },
   {
-    title: "Partner Meeting",
-    body: "Host a private meeting with clients or global partners in the Business Room, with presentation equipment and an adjoining lounge.",
-    room: "Business Room",
+    title: "合作伙伴会议",
+    body: "在商务套房与客户或全球合作伙伴进行私密会谈，配有演示设备和相邻的休息区。",
+    room: "商务套房",
     href: "/business-room",
   },
   {
-    title: "Team Offsite",
-    body: "Combine a focused session, shared meals and team conversation in the Business Room, with overnight accommodation available for up to five.",
-    room: "Business Room",
+    title: "团队外出活动",
+    body: "在商务套房中将专注研讨、共同用餐与团队交流融为一体，并可供最多5人留宿。",
+    room: "商务套房",
     href: "/business-room",
   },
 ];
