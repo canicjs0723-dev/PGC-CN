@@ -13,7 +13,7 @@ export default function Footer() {
             <div key={dup} className="flex">
               {words.map((_, i) => (
                 <span key={i} className="px-8 font-serif text-[64px] leading-none tracking-tight md:px-14 md:text-[150px]">
-                  板桥环球园区 <span className="text-accent">·</span>
+                  PANGYO GLOBAL CAMPUS <span className="text-accent">·</span>
                 </span>
               ))}
             </div>
